@@ -1,0 +1,678 @@
+{
+  "errors": [
+    {
+      "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/format_error.hostname_or_ip",
+      "errorLocation": "#/rules/behaviors/0/options/hostname",
+      "detail": "The Origin Server Hostname option on <strong>`Origin Server`</strong> must be a properly formatted hostname or IPv4 address."
+    },
+    {
+      "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/generic_behavior_issue.cpcode_not_available",
+      "errorLocation": "#/rules/behaviors/1/options/value",
+      "detail": "The CP Code within `Content Provider Code` cannot be used with this property. If you just created this CP Code, please try again later. For more information see <a href=\"/dl/rd/propmgr/PropMgr_CSH.htm#1069\" target=\"_blank\">Content Provider Codes</a>."
+    },
+    {
+      "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/condition_option_validation_error",
+      "errorLocation": "#/rules/children/1/criteria/0/options/values",
+      "detail": "You can only use the `Hostname` match on hostnames that belong to this property"
+    },
+    {
+      "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/format_error.hostname_or_ip",
+      "errorLocation": "#/rules/children/1/behaviors/0/options/hostname",
+      "detail": "The Origin Server Hostname option on <strong>`Origin Server`</strong> must be a properly formatted hostname or IPv4 address."
+    },
+    {
+      "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/format_error.hostname_or_ip",
+      "errorLocation": "#/rules/children/1/behaviors/0/options/customForwardHostHeader",
+      "detail": "The Custom Forward Host Header option on <strong>`Origin Server`</strong> must be a properly formatted hostname or IPv4 address."
+    },
+    {
+      "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/attribute_required",
+      "errorLocation": "#/rules/children/1/behaviors/0/options/customValidCnValues",
+      "detail": "The Match CN/SAN To option on the `Origin Server` behavior is required."
+    },
+    {
+      "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/unknown_attribute",
+      "errorLocation": "#/rules/children/1/behaviors/0/options/origin_cert_policy",
+      "detail": "The behavior '`Origin Server`' does not have origin_cert_policy."
+    },
+    {
+      "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/unknown_attribute",
+      "errorLocation": "#/rules/children/1/behaviors/0/options/origin_cert_valid_cn",
+      "detail": "The behavior '`Origin Server`' does not have origin_cert_valid_cn."
+    }
+  ],
+  "ruleFormat": "latest",
+  "propertyName": "MSCI-Example-Config-Test",
+  "propertyId": "prp_173750",
+  "groupId": "grp_48425",
+  "propertyVersion": 1,
+  "accountId": "act_AANA-289OMW",
+  "etag": "c89a16e0aaa68a2cba80de71d8083b81ef8f44c6",
+  "contractId": "ctr_3-VU3I3C",
+  "warnings": [
+    {
+      "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/validation_message.cookies_logging_not_recommended",
+      "errorLocation": "#/rules/behaviors/7",
+      "detail": "Enabling cookie logging can lead to instances of PII or other PCI data being saved to logs in plain text. On the Secure Platform we do not recommend saving all cookies, however you may still add selected cookies you determine to be safe to save."
+    },
+    {
+      "type": "https://problems.luna.akamaiapis.net/papi/v0/unstable_rule_format",
+      "detail": "This property is using `latest` rule format, which is designed to reflect interface changes immediately. We suggest converting the property to a stable rule format such as `v2016-11-15` to minimize the risk of interface changes breaking your API client program.",
+      "suggestedRuleFormat": "v2016-11-15",
+      "currentRuleFormat": "latest",
+      "title": "Unstable rule format"
+    }
+  ],
+  "rules": {
+    "behaviors": [
+      {
+        "options": {
+          "standardCertificateAuthorities": [
+            "akamai-permissive"
+          ],
+          "customCertificateAuthorities": [
+            {
+              "sha1Fingerprint": "8d295e4b4b19fb73874c54504f6958eb705ef0d6",
+              "subjectCN": "mgmt-PUS-IT-WECA0001-CA",
+              "issuerRDNs": {
+                "CN": "MSCI Internal Root CA"
+              },
+              "sigAlgName": "SHA1WITHRSA",
+              "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5kuHCXvEtH6254ML28OftTIvdaGXLnsZZkWZ3IThYtYhhITPcjBozK53GStd6uV6eLFQzTJvlYyYHCKM+x8c5mYJMmVtoCijFptEtgCuf4HEBwTJvKwlxbzx7e6/eXPM/snQG9swsKTqqwQdCFpOHzLRNDsTVJCozehWAOqeApG2JvkHgNmMnt3q7dOv9Aug9p16VRhFeMSQ5B2/6eqVV3I+C7PZzhfolYc6XZgWOBR29AorYTqnBrUHNd1nA9YEuBf7VY4rxEzXRqC5MUEfSe1HFBesr/qKk6jkL7Q49YYFEB3QCtyJranl3C+jykEBjFu5fS4s6QjPZL9KlKUetwIDAQAB",
+              "serialNumber": 2.0620167320867206e+23,
+              "subjectAlternativeNames": [],
+              "version": 3,
+              "notAfter": 1460808492000,
+              "pemEncodedCert": "-----BEGIN CERTIFICATE-----\nMIIEvTCCA6WgAwIBAgIKK6o3EQAAAAAAEDANBgkqhkiG9w0BAQUFADAgMR4wHAYD\nVQQDExVNU0NJIEludGVybmFsIFJvb3QgQ0EwHhcNMTQwNDE2MTE1ODEyWhcNMTYw\nNDE2MTIwODEyWjBjMRMwEQYKCZImiZPyLGQBGRYDb3JnMRQwEgYKCZImiZPyLGQB\nGRYEbXNjaTEUMBIGCgmSJomT8ixkARkWBG1nbXQxIDAeBgNVBAMTF21nbXQtUFVT\nLUlULVdFQ0EwMDAxLUNBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA\n5kuHCXvEtH6254ML28OftTIvdaGXLnsZZkWZ3IThYtYhhITPcjBozK53GStd6uV6\neLFQzTJvlYyYHCKM+x8c5mYJMmVtoCijFptEtgCuf4HEBwTJvKwlxbzx7e6/eXPM\n/snQG9swsKTqqwQdCFpOHzLRNDsTVJCozehWAOqeApG2JvkHgNmMnt3q7dOv9Aug\n9p16VRhFeMSQ5B2/6eqVV3I+C7PZzhfolYc6XZgWOBR29AorYTqnBrUHNd1nA9YE\nuBf7VY4rxEzXRqC5MUEfSe1HFBesr/qKk6jkL7Q49YYFEB3QCtyJranl3C+jykEB\njFu5fS4s6QjPZL9KlKUetwIDAQABo4IBtDCCAbAwEAYJKwYBBAGCNxUBBAMCAQIw\nIwYJKwYBBAGCNxUCBBYEFLhDomZrKnARS+C+mJLoYKSf8BDtMB0GA1UdDgQWBBSs\nhvNu99cerSBAuQC/Sk138Bo7bTAZBgkrBgEEAYI3FAIEDB4KAFMAdQBiAEMAQTAL\nBgNVHQ8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAfBgNVHSMEGDAWgBRBcf27yS/A\n0mr8jwFA1mJ/oJxB7jCBlAYDVR0fBIGMMIGJMIGGoIGDoIGAhkFodHRwOi8vcGRj\nLWl0LXdyY2EwbTAxL0NlcnRFbnJvbGwvTVNDSSUyMEludGVybmFsJTIwUm9vdCUy\nMENBLmNybIY7ZmlsZTovL1BEQy1JVC1XUkNBME0wMS9DZXJ0RW5yb2xsL01TQ0kg\nSW50ZXJuYWwgUm9vdCBDQS5jcmwwZwYIKwYBBQUHAQEEWzBZMFcGCCsGAQUFBzAC\nhktmaWxlOi8vUERDLUlULVdSQ0EwTTAxL0NlcnRFbnJvbGwvUERDLUlULVdSQ0Ew\nTTAxX01TQ0kgSW50ZXJuYWwgUm9vdCBDQS5jcnQwDQYJKoZIhvcNAQEFBQADggEB\nAKiUSzGWbGaafghsk6aAhAVzhc/eNZtOj1GPac7qq5LILgIvJeWUVRoPCJQ+7LUw\nv+oOOCRYayDkyfvS3KPHwyYbdymYw3Zc3FLgKtRlngDAHJUAZ02rfxmouzTXarLf\nD9k7Ed6tD7qA4C2mzqsbz51G3DrK1Pwj0leKh5dPsRPMrWBiqYPUDegwqqcMiLTy\nGgTenY4vVFxsaQ8i9aCahtqu/YQwx9FPLLQEeP5i/qVRPxF59R12mW3AzvJ+9ZGd\n8Kg1K5FtRORR6gpnIbI3YK2PiFdlUJIVGZv/wzsqqviBRZ1EqS9Akqr9sSAo1zCL\nN2zt+rLauMUsTtBG/+oasF0=\n-----END CERTIFICATE-----\n",
+              "selfSigned": false,
+              "canBeCA": true,
+              "notBefore": 1397649492000,
+              "subjectRDNs": {
+                "CN": "mgmt-PUS-IT-WECA0001-CA",
+                "DC": "org"
+              },
+              "publicKeyFormat": "X.509",
+              "canBeLeaf": false,
+              "publicKeyAlgorithm": "RSA"
+            },
+            {
+              "sha1Fingerprint": "cee5a1eebb8c90271abd9c0566c35defeabf48d1",
+              "subjectCN": "peu-it-weca0001.int.msci.com",
+              "issuerRDNs": {
+                "CN": "MSCI Internal Root CA"
+              },
+              "sigAlgName": "SHA1WITHRSA",
+              "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAueghtib8yTxIAd/t4jkWRAfBmkMaegdrmqo+P6Oomu2POuJ74gALbx5NWKVzT/gd0zwbc/sBWUnI+M1KxJFYw6cz9ucPL21veSKLR3fQASJF2zhZ/8RYCfQWX3QsfJcOeHrZpBYuVXkCfaXKV+YTWHETvp5elpsbnYZpzuLDzG4EzcktdReykyO9YE3QXqdm9QvQDJGWpOYWvwfKZ7VWTyc3xh3F1urBZ+isVs2ONBjH2dPwdeRD1eb4NJbqAQZ7WUvsZLMFZjbaI+v2V+lmykQZQh+RFmy/Erje+eS8lFdESx/KFusqswTbMcMB5PWRmDUnwOqaqpHkcmmIfWIZxQIDAQAB",
+              "serialNumber": 9.389806473586429e+22,
+              "subjectAlternativeNames": [],
+              "version": 3,
+              "notAfter": 1437119828000,
+              "pemEncodedCert": "-----BEGIN CERTIFICATE-----\nMIIEvjCCA6agAwIBAgIKE+I5awAAAAAADjANBgkqhkiG9w0BAQUFADAgMR4wHAYD\nVQQDExVNU0NJIEludGVybmFsIFJvb3QgQ0EwHhcNMTMwNzE3MDc0NzA4WhcNMTUw\nNzE3MDc1NzA4WjBwMQswCQYDVQQGEwJDSDENMAsGA1UECBMETm9uZTEPMA0GA1UE\nBxMGR2VuZXZhMQ0wCwYDVQQKEwRNU0NJMQswCQYDVQQLEwJJVDElMCMGA1UEAxMc\ncGV1LWl0LXdlY2EwMDAxLmludC5tc2NpLmNvbTCCASIwDQYJKoZIhvcNAQEBBQAD\nggEPADCCAQoCggEBALnoIbYm/Mk8SAHf7eI5FkQHwZpDGnoHa5qqPj+jqJrtjzri\ne+IAC28eTVilc0/4HdM8G3P7AVlJyPjNSsSRWMOnM/bnDy9tb3kii0d30AEiRds4\nWf/EWAn0Fl90LHyXDnh62aQWLlV5An2lylfmE1hxE76eXpabG52Gac7iw8xuBM3J\nLXUXspMjvWBN0F6nZvUL0AyRlqTmFr8Hyme1Vk8nN8YdxdbqwWforFbNjjQYx9nT\n8HXkQ9Xm+DSW6gEGe1lL7GSzBWY22iPr9lfpZspEGUIfkRZsvxK43vnkvJRXREsf\nyhbrKrME2zHDAeT1kZg1J8DqmqqR5HJpiH1iGcUCAwEAAaOCAagwggGkMA4GA1Ud\nDwEB/wQEAwIE8DATBgNVHSUEDDAKBggrBgEFBQcDATB4BgkqhkiG9w0BCQ8EazBp\nMA4GCCqGSIb3DQMCAgIAgDAOBggqhkiG9w0DBAICAIAwCwYJYIZIAWUDBAEqMAsG\nCWCGSAFlAwQBLTALBglghkgBZQMEAQIwCwYJYIZIAWUDBAEFMAcGBSsOAwIHMAoG\nCCqGSIb3DQMHMB0GA1UdDgQWBBQ0FGE4BwBfNCL24VyQ9Ty55xPdBDAfBgNVHSME\nGDAWgBRBcf27yS/A0mr8jwFA1mJ/oJxB7jBMBgNVHR8ERTBDMEGgP6A9hjtmaWxl\nOi8vUERDLUlULVdSQ0EwTTAxL0NlcnRFbnJvbGwvTVNDSSBJbnRlcm5hbCBSb290\nIENBLmNybDBnBggrBgEFBQcBAQRbMFkwVwYIKwYBBQUHMAKGS2ZpbGU6Ly9QREMt\nSVQtV1JDQTBNMDEvQ2VydEVucm9sbC9QREMtSVQtV1JDQTBNMDFfTVNDSSBJbnRl\ncm5hbCBSb290IENBLmNydDAMBgNVHRMBAf8EAjAAMA0GCSqGSIb3DQEBBQUAA4IB\nAQB3pz/fpzNR/cRtiDly/w1Z7dRUNPFGse33VcoduIb+LtFLsIlBv0KFVuIeuhL9\nx9LmE/ZnWtpQg1QPGeEi+5L/dxT1BqVwjTEz9wY43L5FDS6GlqmWcEFsAkDlB3b/\n1cUytWzHv+6xxI89zaDw8TQ3LTVTmx9gRXoFGhkoa0V2MucnHruB9/1LegfsDKmJ\nM7UICD+OnvT8/KziaVsNE4SV2YupeUpStjh9DEx7UlwqvF9sbUAGO8eqJ8C5fE3A\n6rkDDjC/dZ4L4sAE9O2fd8VL4C98GrhRN4Pw8cGcg5/ggH/Oguse1x2sM4uHXzQ6\ne5D5gVznm4WsmLA1CfFjHrIt\n-----END CERTIFICATE-----\n",
+              "selfSigned": false,
+              "canBeCA": false,
+              "notBefore": 1374047228000,
+              "subjectRDNs": {
+                "OU": "IT",
+                "C": "CH",
+                "O": "MSCI",
+                "CN": "peu-it-weca0001.int.msci.com",
+                "ST": "None",
+                "L": "Geneva"
+              },
+              "publicKeyFormat": "X.509",
+              "canBeLeaf": true,
+              "publicKeyAlgorithm": "RSA"
+            }
+          ],
+          "httpPort": 80,
+          "cacheKeyHostname": "ORIGIN_HOSTNAME",
+          "forwardHostHeader": "REQUEST_HOST_HEADER",
+          "originSni": true,
+          "hostname": "Origin DNS Name e.g., www-mscidomain-com.msci.net",
+          "trueClientIpHeader": "True-Client-IP",
+          "compress": true,
+          "customValidCnValues": [
+            "{{Origin Hostname}}",
+            "{{Forward Host Header}}"
+          ],
+          "customCertificates": [],
+          "originType": "CUSTOMER",
+          "ports": "",
+          "originCertsToHonor": "COMBO",
+          "httpsPort": 443,
+          "originCertificate": "",
+          "enableTrueClientIp": true,
+          "trueClientIpClientSetting": true,
+          "verificationMode": "CUSTOM"
+        },
+        "uuid": "f7ac404b-7892-409d-b421-810d318299a1",
+        "name": "origin"
+      },
+      {
+        "options": {
+          "value": {
+            "id": 216972
+          }
+        },
+        "uuid": "49f8ca03-c5c4-4594-9565-a67a4301a500",
+        "name": "cpCode"
+      },
+      {
+        "options": {
+          "behavior": "NO_STORE"
+        },
+        "uuid": "3563b1d8-3e71-446d-a767-5eb2ffc17994",
+        "name": "caching"
+      },
+      {
+        "options": {
+          "enabled": false
+        },
+        "uuid": "1fc5b748-2179-410a-97a0-458bd20f7385",
+        "name": "sureRoute"
+      },
+      {
+        "options": {
+          "enabled": true
+        },
+        "uuid": "a35a418f-5f47-4a45-b46e-30ef0780398b",
+        "name": "tieredDistribution"
+      },
+      {
+        "options": {
+          "enabled": true
+        },
+        "uuid": "f722c9e1-e23a-4db7-9336-4cbc61ed629c",
+        "name": "prefetch"
+      },
+      {
+        "options": {
+          "enabled": true,
+          "allowWithoutContentLength": false
+        },
+        "uuid": "d85991f0-4002-4442-ba35-5f4fc9127be9",
+        "name": "allowPost"
+      },
+      {
+        "options": {
+          "logCookies": "SOME",
+          "logAcceptLanguage": false,
+          "cookies": [
+            "jsessionid"
+          ],
+          "logUserAgent": true,
+          "logHost": true,
+          "logReferer": true
+        },
+        "uuid": "03360e64-7281-4eec-a608-25021296e496",
+        "name": "report"
+      }
+    ],
+    "children": [
+      {
+        "templateLink": "/platformtoolkit/service/ruletemplate/5983159/1?accountId=AANA-289OMW&gid=48425",
+        "behaviors": [
+          {
+            "options": {
+              "enabled": false
+            },
+            "uuid": "0d5ef396-af9f-40bb-8433-07702925d4a8",
+            "name": "allowPut",
+            "templateUuid": "c1532a25-b9c3-4806-9700-1136374ddfcf"
+          },
+          {
+            "options": {
+              "enabled": false
+            },
+            "uuid": "4a94a728-0169-48b8-ae76-dcd8f2eb1fd9",
+            "name": "allowDelete",
+            "templateUuid": "1d5c2def-ae02-49ff-bcf5-5b27c99baad3"
+          }
+        ],
+        "children": [
+          {
+            "templateLink": "/platformtoolkit/service/ruletemplate/5983159/1?accountId=AANA-289OMW&gid=48425",
+            "behaviors": [
+              {
+                "options": {
+                  "action": "ADD",
+                  "headerValue": "Insert-Config-Name-Here",
+                  "customHeaderName": "X-DSAconfig",
+                  "standardAddHeaderName": "OTHER"
+                },
+                "uuid": "b29cdcce-32dc-4016-baf6-bc4000327d7f",
+                "name": "modifyOutgoingRequestHeader",
+                "templateUuid": "0c983f7a-29f3-4b70-84f8-153dc92a47bd"
+              },
+              {
+                "options": {
+                  "action": "ADD",
+                  "headerValue": "Insert-Config-Name-Here",
+                  "customHeaderName": "X-DSAconfig",
+                  "standardAddHeaderName": "OTHER"
+                },
+                "uuid": "092f1e88-fd70-4825-b9b7-b056562dcf85",
+                "name": "modifyOutgoingResponseHeader",
+                "templateUuid": "a38669f0-68c2-4950-b182-a45f36443fac"
+              }
+            ],
+            "children": [],
+            "templateUuid": "d29a5db6-0ba7-4f21-a7df-1c1be986266a",
+            "criteriaMustSatisfy": "all",
+            "uuid": "21210ca2-d0c0-4a94-9fd5-c28264a5e056",
+            "name": "X-DSAconfig",
+            "criteria": [],
+            "comments": "Inserts X-DSAconfig into both the HTTP request header passed to the server as well is in the HTTP Response header passed back to the client. It simply provides a quick way to see that Akamai is being used and which configuration was applied."
+          },
+          {
+            "templateLink": "/platformtoolkit/service/ruletemplate/5983159/1?accountId=AANA-289OMW&gid=48425",
+            "behaviors": [
+              {
+                "options": {
+                  "enabled": false
+                },
+                "uuid": "2214eb61-7aa2-4ea0-bf31-3f414a6a2d5f",
+                "name": "edgeScape",
+                "templateUuid": "90606801-1d4e-4c03-93e8-5780e08e71e9"
+              }
+            ],
+            "children": [],
+            "templateUuid": "11a330a5-c72c-469e-8eb9-68756f21929e",
+            "criteriaMustSatisfy": "all",
+            "uuid": "3a888775-04e8-4e18-b108-6ef517443578",
+            "name": "Geo-Location",
+            "criteria": [],
+            "comments": "This inserts X-Akamai-Edgescape into the HTTP Request header sent to the origin server. This header contains geo location information about the client, including country-Code, region_code, city name, information about the ISP, and more. Only turn this on if the application uses this header."
+          },
+          {
+            "templateLink": "/platformtoolkit/service/ruletemplate/5983159/1?accountId=AANA-289OMW&gid=48425",
+            "behaviors": [],
+            "children": [
+              {
+                "templateLink": "/platformtoolkit/service/ruletemplate/5983159/1?accountId=AANA-289OMW&gid=48425",
+                "behaviors": [
+                  {
+                    "options": {
+                      "behavior": "MAX_AGE",
+                      "mustRevalidate": false,
+                      "ttl": "5m"
+                    },
+                    "uuid": "970bdcd5-47e3-4dae-9ae1-e77ab4c7a4b3",
+                    "name": "caching",
+                    "templateUuid": "b5a0024f-3e38-4524-932d-c8c0b44f6bcb"
+                  }
+                ],
+                "children": [],
+                "templateUuid": "bf715af0-2d14-43b4-a6bf-3e2cfdc228a4",
+                "criteriaMustSatisfy": "all",
+                "uuid": "a5156a7a-8b9e-4fb0-9afb-01cbe4aca4fe",
+                "name": "Static Content Caching",
+                "criteria": [
+                  {
+                    "options": {
+                      "matchCaseSensitive": false,
+                      "matchOperator": "IS_ONE_OF",
+                      "values": [
+                        "gif",
+                        "ico"
+                      ]
+                    },
+                    "uuid": "a3999cb2-efc2-4ddd-96e0-ef7dd90efcf3",
+                    "name": "fileExtension",
+                    "templateUuid": "5a61186a-eeb1-4f45-9adc-483d6cc3feac"
+                  }
+                ],
+                "comments": "This rule controls the caching for the specified file extensions. If an extension matches, then the file may be cached for the period indicated in the behaviour."
+              },
+              {
+                "templateLink": "/platformtoolkit/service/ruletemplate/5983159/1?accountId=AANA-289OMW&gid=48425",
+                "behaviors": [
+                  {
+                    "options": {
+                      "behavior": "TUNNEL_ORIGIN"
+                    },
+                    "uuid": "7a697dfd-cc85-412b-9478-3b47b459b168",
+                    "name": "downstreamCache",
+                    "templateUuid": "869a06d9-3880-40cc-b88c-d75ec1667a8b"
+                  }
+                ],
+                "children": [],
+                "templateUuid": "7715f06b-40b0-483d-9736-6c67045cf510",
+                "criteriaMustSatisfy": "any",
+                "uuid": "6de70aa2-d31f-4218-b223-9552d6babe39",
+                "name": "Dynamic Content",
+                "criteria": [
+                  {
+                    "options": {
+                      "value": "CACHEABLE",
+                      "matchOperator": "IS_NOT"
+                    },
+                    "uuid": "30dbf158-a651-4bbf-bb8e-eac1686f63d5",
+                    "name": "cacheability",
+                    "templateUuid": "208fd36b-13c4-43d9-885d-34c947bd1ee0"
+                  }
+                ],
+                "comments": "This rule dictates what happens for non-cachable / Dynamic content. In this case, the cachability headers as sent from the origin server are passed directly on to the client."
+              }
+            ],
+            "templateUuid": "6acb5048-c2e5-4f0c-a1c3-e7a8c2d25daf",
+            "criteriaMustSatisfy": "all",
+            "uuid": "4ee904ff-8494-47e9-8085-b6d58f214474",
+            "name": "Caching Behavior",
+            "criteria": [],
+            "comments": "The sub-rules under this rule control what items may be cached. By default. Caching is usually disabled in the top Default rule."
+          },
+          {
+            "templateLink": "/platformtoolkit/service/ruletemplate/5983159/1?accountId=AANA-289OMW&gid=48425",
+            "behaviors": [],
+            "children": [
+              {
+                "templateLink": "/platformtoolkit/service/ruletemplate/5983159/1?accountId=AANA-289OMW&gid=48425",
+                "behaviors": [
+                  {
+                    "options": {
+                      "behavior": "ALWAYS"
+                    },
+                    "uuid": "af66704c-81a9-4816-b87c-628bcb4666ea",
+                    "name": "gzipResponse",
+                    "templateUuid": "a0071934-ee77-420a-9f5a-2b4d1051fb15"
+                  }
+                ],
+                "children": [],
+                "templateUuid": "daf99b04-750e-47b6-af23-f5e0012a7675",
+                "criteriaMustSatisfy": "all",
+                "uuid": "c974b0ad-68c2-446a-89f1-e9f19ba2a410",
+                "name": "Conditionally Enable Gzip",
+                "criteria": [
+                  {
+                    "options": {
+                      "matchWildcardValue": true,
+                      "matchWildcardName": false,
+                      "values": [
+                        "text/html*",
+                        "application/x-javascript*",
+                        "text/css*"
+                      ],
+                      "headerName": "Content-Type",
+                      "matchOperator": "IS_ONE_OF",
+                      "matchCaseSensitiveValue": false
+                    },
+                    "uuid": "c47c8a05-62a4-4b2f-b317-890aab65d6ec",
+                    "name": "responseHeader",
+                    "templateUuid": "3072fce7-842a-4c9e-9618-bfe13abb6de2"
+                  }
+                ],
+                "comments": "This behavior dictates whether Gzip compression can be used between the client and Akamai Edge Server. This is based on the Content-Type and is typically done for text/html, application/x-javascript, and text/css."
+              },
+              {
+                "templateLink": "/platformtoolkit/service/ruletemplate/5983159/1?accountId=AANA-289OMW&gid=48425",
+                "behaviors": [
+                  {
+                    "options": {
+                      "behavior": "NEVER"
+                    },
+                    "uuid": "31e096c9-03a3-4e88-8421-0d5cb7a803fc",
+                    "name": "gzipResponse",
+                    "templateUuid": "6e3f2bfd-b49b-41b5-9868-4e973ca0b2af"
+                  }
+                ],
+                "children": [],
+                "templateUuid": "19717a97-8ec9-40c2-bcb9-0094232d7342",
+                "criteriaMustSatisfy": "all",
+                "uuid": "63f429cd-2a6e-482e-b998-432f03be05cc",
+                "name": "Old IE Browsers",
+                "criteria": [
+                  {
+                    "options": {
+                      "matchWildcardValue": true,
+                      "matchWildcardName": false,
+                      "values": [
+                        "*MSIE 5*Mac*",
+                        "*MSIE 4*"
+                      ],
+                      "headerName": "User-Agent",
+                      "matchOperator": "IS_ONE_OF",
+                      "matchCaseSensitiveValue": false
+                    },
+                    "uuid": "a6423cf3-1f8d-454d-ab62-c0742b4e2dae",
+                    "name": "requestHeader",
+                    "templateUuid": "8b26d9ed-c862-495f-b74a-fd3384306cae"
+                  }
+                ],
+                "comments": ""
+              },
+              {
+                "templateLink": "/platformtoolkit/service/ruletemplate/5983159/1?accountId=AANA-289OMW&gid=48425",
+                "behaviors": [
+                  {
+                    "options": {
+                      "behavior": "NEVER"
+                    },
+                    "uuid": "eaebb446-1c40-4618-a979-d85c082806c8",
+                    "name": "gzipResponse",
+                    "templateUuid": "1a9e0297-1943-4ef3-a263-d8e34ecf21c3"
+                  }
+                ],
+                "children": [],
+                "templateUuid": "cbeecba1-0d3a-45b6-a278-3df63b2c2cbe",
+                "criteriaMustSatisfy": "all",
+                "uuid": "f8d2f716-33a9-498d-a52a-6a8fba848df4",
+                "name": "Old Mozilla Browsers",
+                "criteria": [
+                  {
+                    "options": {
+                      "matchWildcardValue": true,
+                      "matchWildcardName": false,
+                      "values": [
+                        "*Mozilla/4*"
+                      ],
+                      "headerName": "User-Agent",
+                      "matchOperator": "IS_ONE_OF",
+                      "matchCaseSensitiveValue": false
+                    },
+                    "uuid": "b6ef30de-9e8d-4239-8f9a-835b31eec5ca",
+                    "name": "requestHeader",
+                    "templateUuid": "8a21c93e-d9bf-47f1-8c52-dc9912f0e743"
+                  },
+                  {
+                    "options": {
+                      "matchWildcardValue": true,
+                      "matchWildcardName": false,
+                      "values": [
+                        "*(compatible;*"
+                      ],
+                      "headerName": "User-Agent",
+                      "matchOperator": "IS_NOT_ONE_OF",
+                      "matchCaseSensitiveValue": false
+                    },
+                    "uuid": "cf7f7e79-b4ed-4ef0-8ac5-db8dca49b51e",
+                    "name": "requestHeader",
+                    "templateUuid": "69e50669-5dc2-41c1-8a54-4e73bef04977"
+                  }
+                ],
+                "comments": ""
+              }
+            ],
+            "templateUuid": "0e963daa-8ca3-45d7-b84f-8116204abd65",
+            "criteriaMustSatisfy": "all",
+            "uuid": "5f4819ab-b6fc-4d4d-89f6-f34feb6db000",
+            "name": "Content Compression (Gzip)",
+            "criteria": [],
+            "comments": "This set of rules controls the use of Gzip compression of content between the Akaami edhe server and the client. Essentially, it is enabled for specified MIME types but disabled for older browsers."
+          }
+        ],
+        "templateUuid": "4be79dd0-04e3-470d-951d-12e39d065bf6",
+        "criteriaMustSatisfy": "all",
+        "uuid": "641a2264-bcd9-466e-b699-b012cfa77963",
+        "name": "MSCI Configuration v5",
+        "criteria": [],
+        "comments": "This is the MSCI Standard Akamai Template. Be sure to: (a) edit the X-DSAconfig values. Everything else may remain as defaults in this. You may wish to tune the static content caching in the future.\n\nIn the \"Default Rule\", be sure to: (a) Edit the SureRoute to use \"/akamai-test-object.html\"; (b) Enable logging of all headers and selected cookies as needed (e.g., JSESSIONID); (c) set the Content Provider Code; (d) set the origin server information."
+      },
+      {
+        "templateLink": "/platformtoolkit/service/ruletemplate/5983241/1?accountId=AANA-289OMW&gid=48425",
+        "behaviors": [
+          {
+            "options": {
+              "originCertsToHonor": "COMBO",
+              "customCertificateAuthorities": [
+                {
+                  "sha1Fingerprint": "cee5a1eebb8c90271abd9c0566c35defeabf48d1",
+                  "subjectCN": "peu-it-weca0001.int.msci.com",
+                  "issuerRDNs": {
+                    "CN": "MSCI Internal Root CA"
+                  },
+                  "sigAlgName": "SHA1WITHRSA",
+                  "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAueghtib8yTxIAd/t4jkWRAfBmkMaegdrmqo+P6Oomu2POuJ74gALbx5NWKVzT/gd0zwbc/sBWUnI+M1KxJFYw6cz9ucPL21veSKLR3fQASJF2zhZ/8RYCfQWX3QsfJcOeHrZpBYuVXkCfaXKV+YTWHETvp5elpsbnYZpzuLDzG4EzcktdReykyO9YE3QXqdm9QvQDJGWpOYWvwfKZ7VWTyc3xh3F1urBZ+isVs2ONBjH2dPwdeRD1eb4NJbqAQZ7WUvsZLMFZjbaI+v2V+lmykQZQh+RFmy/Erje+eS8lFdESx/KFusqswTbMcMB5PWRmDUnwOqaqpHkcmmIfWIZxQIDAQAB",
+                  "serialNumber": 9.389806473586429e+22,
+                  "subjectAlternativeNames": [],
+                  "version": 3,
+                  "notAfter": 1437119828000,
+                  "pemEncodedCert": "-----BEGIN CERTIFICATE-----\nMIIEvjCCA6agAwIBAgIKE+I5awAAAAAADjANBgkqhkiG9w0BAQUFADAgMR4wHAYD\nVQQDExVNU0NJIEludGVybmFsIFJvb3QgQ0EwHhcNMTMwNzE3MDc0NzA4WhcNMTUw\nNzE3MDc1NzA4WjBwMQswCQYDVQQGEwJDSDENMAsGA1UECBMETm9uZTEPMA0GA1UE\nBxMGR2VuZXZhMQ0wCwYDVQQKEwRNU0NJMQswCQYDVQQLEwJJVDElMCMGA1UEAxMc\ncGV1LWl0LXdlY2EwMDAxLmludC5tc2NpLmNvbTCCASIwDQYJKoZIhvcNAQEBBQAD\nggEPADCCAQoCggEBALnoIbYm/Mk8SAHf7eI5FkQHwZpDGnoHa5qqPj+jqJrtjzri\ne+IAC28eTVilc0/4HdM8G3P7AVlJyPjNSsSRWMOnM/bnDy9tb3kii0d30AEiRds4\nWf/EWAn0Fl90LHyXDnh62aQWLlV5An2lylfmE1hxE76eXpabG52Gac7iw8xuBM3J\nLXUXspMjvWBN0F6nZvUL0AyRlqTmFr8Hyme1Vk8nN8YdxdbqwWforFbNjjQYx9nT\n8HXkQ9Xm+DSW6gEGe1lL7GSzBWY22iPr9lfpZspEGUIfkRZsvxK43vnkvJRXREsf\nyhbrKrME2zHDAeT1kZg1J8DqmqqR5HJpiH1iGcUCAwEAAaOCAagwggGkMA4GA1Ud\nDwEB/wQEAwIE8DATBgNVHSUEDDAKBggrBgEFBQcDATB4BgkqhkiG9w0BCQ8EazBp\nMA4GCCqGSIb3DQMCAgIAgDAOBggqhkiG9w0DBAICAIAwCwYJYIZIAWUDBAEqMAsG\nCWCGSAFlAwQBLTALBglghkgBZQMEAQIwCwYJYIZIAWUDBAEFMAcGBSsOAwIHMAoG\nCCqGSIb3DQMHMB0GA1UdDgQWBBQ0FGE4BwBfNCL24VyQ9Ty55xPdBDAfBgNVHSME\nGDAWgBRBcf27yS/A0mr8jwFA1mJ/oJxB7jBMBgNVHR8ERTBDMEGgP6A9hjtmaWxl\nOi8vUERDLUlULVdSQ0EwTTAxL0NlcnRFbnJvbGwvTVNDSSBJbnRlcm5hbCBSb290\nIENBLmNybDBnBggrBgEFBQcBAQRbMFkwVwYIKwYBBQUHMAKGS2ZpbGU6Ly9QREMt\nSVQtV1JDQTBNMDEvQ2VydEVucm9sbC9QREMtSVQtV1JDQTBNMDFfTVNDSSBJbnRl\ncm5hbCBSb290IENBLmNydDAMBgNVHRMBAf8EAjAAMA0GCSqGSIb3DQEBBQUAA4IB\nAQB3pz/fpzNR/cRtiDly/w1Z7dRUNPFGse33VcoduIb+LtFLsIlBv0KFVuIeuhL9\nx9LmE/ZnWtpQg1QPGeEi+5L/dxT1BqVwjTEz9wY43L5FDS6GlqmWcEFsAkDlB3b/\n1cUytWzHv+6xxI89zaDw8TQ3LTVTmx9gRXoFGhkoa0V2MucnHruB9/1LegfsDKmJ\nM7UICD+OnvT8/KziaVsNE4SV2YupeUpStjh9DEx7UlwqvF9sbUAGO8eqJ8C5fE3A\n6rkDDjC/dZ4L4sAE9O2fd8VL4C98GrhRN4Pw8cGcg5/ggH/Oguse1x2sM4uHXzQ6\ne5D5gVznm4WsmLA1CfFjHrIt\n-----END CERTIFICATE-----\n",
+                  "selfSigned": false,
+                  "canBeCA": false,
+                  "notBefore": 1374047228000,
+                  "subjectRDNs": {
+                    "OU": "IT",
+                    "C": "CH",
+                    "O": "MSCI",
+                    "CN": "peu-it-weca0001.int.msci.com",
+                    "ST": "None",
+                    "L": "Geneva"
+                  },
+                  "publicKeyFormat": "X.509",
+                  "canBeLeaf": true,
+                  "publicKeyAlgorithm": "RSA"
+                },
+                {
+                  "sha1Fingerprint": "8d295e4b4b19fb73874c54504f6958eb705ef0d6",
+                  "subjectCN": "mgmt-PUS-IT-WECA0001-CA",
+                  "issuerRDNs": {
+                    "CN": "MSCI Internal Root CA"
+                  },
+                  "sigAlgName": "SHA1WITHRSA",
+                  "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5kuHCXvEtH6254ML28OftTIvdaGXLnsZZkWZ3IThYtYhhITPcjBozK53GStd6uV6eLFQzTJvlYyYHCKM+x8c5mYJMmVtoCijFptEtgCuf4HEBwTJvKwlxbzx7e6/eXPM/snQG9swsKTqqwQdCFpOHzLRNDsTVJCozehWAOqeApG2JvkHgNmMnt3q7dOv9Aug9p16VRhFeMSQ5B2/6eqVV3I+C7PZzhfolYc6XZgWOBR29AorYTqnBrUHNd1nA9YEuBf7VY4rxEzXRqC5MUEfSe1HFBesr/qKk6jkL7Q49YYFEB3QCtyJranl3C+jykEBjFu5fS4s6QjPZL9KlKUetwIDAQAB",
+                  "serialNumber": 2.0620167320867206e+23,
+                  "subjectAlternativeNames": [],
+                  "version": 3,
+                  "notAfter": 1460808492000,
+                  "pemEncodedCert": "-----BEGIN CERTIFICATE-----\nMIIEvTCCA6WgAwIBAgIKK6o3EQAAAAAAEDANBgkqhkiG9w0BAQUFADAgMR4wHAYD\nVQQDExVNU0NJIEludGVybmFsIFJvb3QgQ0EwHhcNMTQwNDE2MTE1ODEyWhcNMTYw\nNDE2MTIwODEyWjBjMRMwEQYKCZImiZPyLGQBGRYDb3JnMRQwEgYKCZImiZPyLGQB\nGRYEbXNjaTEUMBIGCgmSJomT8ixkARkWBG1nbXQxIDAeBgNVBAMTF21nbXQtUFVT\nLUlULVdFQ0EwMDAxLUNBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA\n5kuHCXvEtH6254ML28OftTIvdaGXLnsZZkWZ3IThYtYhhITPcjBozK53GStd6uV6\neLFQzTJvlYyYHCKM+x8c5mYJMmVtoCijFptEtgCuf4HEBwTJvKwlxbzx7e6/eXPM\n/snQG9swsKTqqwQdCFpOHzLRNDsTVJCozehWAOqeApG2JvkHgNmMnt3q7dOv9Aug\n9p16VRhFeMSQ5B2/6eqVV3I+C7PZzhfolYc6XZgWOBR29AorYTqnBrUHNd1nA9YE\nuBf7VY4rxEzXRqC5MUEfSe1HFBesr/qKk6jkL7Q49YYFEB3QCtyJranl3C+jykEB\njFu5fS4s6QjPZL9KlKUetwIDAQABo4IBtDCCAbAwEAYJKwYBBAGCNxUBBAMCAQIw\nIwYJKwYBBAGCNxUCBBYEFLhDomZrKnARS+C+mJLoYKSf8BDtMB0GA1UdDgQWBBSs\nhvNu99cerSBAuQC/Sk138Bo7bTAZBgkrBgEEAYI3FAIEDB4KAFMAdQBiAEMAQTAL\nBgNVHQ8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAfBgNVHSMEGDAWgBRBcf27yS/A\n0mr8jwFA1mJ/oJxB7jCBlAYDVR0fBIGMMIGJMIGGoIGDoIGAhkFodHRwOi8vcGRj\nLWl0LXdyY2EwbTAxL0NlcnRFbnJvbGwvTVNDSSUyMEludGVybmFsJTIwUm9vdCUy\nMENBLmNybIY7ZmlsZTovL1BEQy1JVC1XUkNBME0wMS9DZXJ0RW5yb2xsL01TQ0kg\nSW50ZXJuYWwgUm9vdCBDQS5jcmwwZwYIKwYBBQUHAQEEWzBZMFcGCCsGAQUFBzAC\nhktmaWxlOi8vUERDLUlULVdSQ0EwTTAxL0NlcnRFbnJvbGwvUERDLUlULVdSQ0Ew\nTTAxX01TQ0kgSW50ZXJuYWwgUm9vdCBDQS5jcnQwDQYJKoZIhvcNAQEFBQADggEB\nAKiUSzGWbGaafghsk6aAhAVzhc/eNZtOj1GPac7qq5LILgIvJeWUVRoPCJQ+7LUw\nv+oOOCRYayDkyfvS3KPHwyYbdymYw3Zc3FLgKtRlngDAHJUAZ02rfxmouzTXarLf\nD9k7Ed6tD7qA4C2mzqsbz51G3DrK1Pwj0leKh5dPsRPMrWBiqYPUDegwqqcMiLTy\nGgTenY4vVFxsaQ8i9aCahtqu/YQwx9FPLLQEeP5i/qVRPxF59R12mW3AzvJ+9ZGd\n8Kg1K5FtRORR6gpnIbI3YK2PiFdlUJIVGZv/wzsqqviBRZ1EqS9Akqr9sSAo1zCL\nN2zt+rLauMUsTtBG/+oasF0=\n-----END CERTIFICATE-----\n",
+                  "selfSigned": false,
+                  "canBeCA": true,
+                  "notBefore": 1397649492000,
+                  "subjectRDNs": {
+                    "CN": "mgmt-PUS-IT-WECA0001-CA",
+                    "DC": "org"
+                  },
+                  "publicKeyFormat": "X.509",
+                  "canBeLeaf": false,
+                  "publicKeyAlgorithm": "RSA"
+                }
+              ],
+              "httpPort": 80,
+              "cacheKeyHostname": "ORIGIN_HOSTNAME",
+              "forwardHostHeader": "CUSTOM",
+              "trueClientIpClientSetting": true,
+              "origin_cert_valid_cn": "forwardhostheader",
+              "trueClientIpHeader": "True-Client-IP",
+              "standardCertificateAuthorities": [
+                "akamai-permissive"
+              ],
+              "compress": true,
+              "customCertificates": [],
+              "originType": "CUSTOMER",
+              "originSni": true,
+              "ports": "",
+              "hostname": "Origin DNS Name  (e.g., www-msci-com.msci.net)",
+              "httpsPort": 443,
+              "origin_cert_policy": "enforce",
+              "originCertificate": "",
+              "enableTrueClientIp": true,
+              "customForwardHostHeader": "Production-Server-DNS-Name  (e.g., www.msci.com)",
+              "verificationMode": "CUSTOM"
+            },
+            "uuid": "3733d51b-beec-44a2-9422-958e28ad494c",
+            "name": "origin",
+            "templateUuid": "1437cdd9-d027-45b1-83d0-1fd434d1ffcb"
+          },
+          {
+            "options": {
+              "regexHeaderMatch": "Test-Server-DNS-Name (e.g., test-www.msci.com)",
+              "regexHeaderReplace": "Production-Server-DNS-Name  (e.g., www.msci.com)",
+              "standardModifyHeaderName": "OTHER",
+              "action": "REGEX",
+              "customHeaderName": "Referer",
+              "matchMultiple": true
+            },
+            "uuid": "49a648a2-fdce-4a41-b21e-d5bde48a4cd8",
+            "name": "modifyOutgoingRequestHeader",
+            "templateUuid": "2a28d7a6-3a11-4171-a70e-a1942a1d5530"
+          },
+          {
+            "options": {
+              "regexHeaderMatch": "Test-Server-DNS-Name (e.g., test-www.msci.com)",
+              "regexHeaderReplace": "Production-Server-DNS-Name  (e.g., www.msci.com)",
+              "standardModifyHeaderName": "OTHER",
+              "action": "REGEX",
+              "customHeaderName": "Cookie",
+              "matchMultiple": true
+            },
+            "uuid": "2938b9ae-1a7c-44bb-964f-a572a325428a",
+            "name": "modifyOutgoingRequestHeader",
+            "templateUuid": "02875cf6-ede9-4e52-a5b5-99d923000884"
+          },
+          {
+            "options": {
+              "regexHeaderMatch": "Production-Server-DNS-Name  (e.g., www.msci.com)",
+              "regexHeaderReplace": "Test-Server-DNS-Name (e.g., test-www.msci.com)",
+              "standardModifyHeaderName": "OTHER",
+              "action": "REGEX",
+              "customHeaderName": "Set-Cookie",
+              "matchMultiple": true
+            },
+            "uuid": "115e9f29-39cb-47b9-856f-c8482033cae3",
+            "name": "modifyOutgoingResponseHeader",
+            "templateUuid": "5656edc1-a17e-4624-8765-cf17bae687b4"
+          },
+          {
+            "options": {
+              "regexHeaderMatch": "Production-Server-DNS-Name  (e.g., www.msci.com)",
+              "regexHeaderReplace": "Test-Server-DNS-Name (e.g., test-www.msci.com)",
+              "standardModifyHeaderName": "OTHER",
+              "action": "REGEX",
+              "customHeaderName": "Location",
+              "matchMultiple": true
+            },
+            "uuid": "3276f873-7b1e-44de-9eb2-60812bfbcd03",
+            "name": "modifyOutgoingResponseHeader",
+            "templateUuid": "348092bb-f1ec-4ef7-8b05-2213b9437749"
+          }
+        ],
+        "children": [],
+        "templateUuid": "a8b05ac1-551e-45ff-977c-d044ba8d0835",
+        "criteriaMustSatisfy": "all",
+        "uuid": "2bb58eaa-2253-4203-b966-925a10e989c0",
+        "name": "MSCI Test Wrapper v5a",
+        "criteria": [
+          {
+            "options": {
+              "matchOperator": "IS_ONE_OF",
+              "values": [
+                "Test-Server-DNS-Name-Goes-HERE"
+              ]
+            },
+            "uuid": "4a6c6c2c-10cd-46f4-a0c7-501c9c97b31a",
+            "name": "hostname",
+            "templateUuid": "eade9eeb-7cd7-4cb4-b583-9b0ea704ed7d"
+          }
+        ],
+        "comments": "This rule contains behaviors to modify 'Referer' and 'Cookie' in the HTTP Request header sent to the origin server as well as 'Set-Cookie' and 'Location' in the HTTP Response header from the origin server."
+      }
+    ],
+    "options": {
+      "is_secure": true
+    },
+    "uuid": "default",
+    "name": "default",
+    "comments": "This is an EXAMPLE configuration for the ficticious domain www.mscidomain.com. This domain is CNAME'd to an Akamai server.  Akamai routes to the origin domain by using the name www-mscidomain-com.msci.net which has an 'A' (address) record with the actual server IP address. Remember, rules are parsed top down and the LAST match wins.  NOTE: As this is an EXAMPLE configuration, do not push it to staging or production!!"
+  }
+}

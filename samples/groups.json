@@ -1,0 +1,102 @@
+{
+  "accountId": "act_AANA-289OMW",
+  "accountName": "MSCI, Inc.",
+  "groups": {
+    "items": [
+      {
+        "groupName": "PubWeb",
+        "groupId": "grp_42612",
+        "parentGroupId": "grp_35151",
+        "contractIds": [
+          "ctr_3-VU3I3C"
+        ]
+      },
+      {
+        "groupName": "MSCI, Inc.-3-VU3I3C",
+        "groupId": "grp_35151",
+        "contractIds": [
+          "ctr_3-VU3I3C"
+        ]
+      },
+      {
+        "groupName": "ESG",
+        "groupId": "grp_44252",
+        "parentGroupId": "grp_35151",
+        "contractIds": [
+          "ctr_3-VU3I3C"
+        ]
+      },
+      {
+        "groupName": "TEMPLATES",
+        "groupId": "grp_48425",
+        "parentGroupId": "grp_35151",
+        "contractIds": [
+          "ctr_3-VU3I3C"
+        ]
+      },
+      {
+        "groupName": "PMA",
+        "groupId": "grp_44253",
+        "parentGroupId": "grp_35151",
+        "contractIds": [
+          "ctr_3-VU3I3C"
+        ]
+      },
+      {
+        "groupName": "Index",
+        "groupId": "grp_44254",
+        "parentGroupId": "grp_35151",
+        "contractIds": [
+          "ctr_3-VU3I3C"
+        ]
+      },
+      {
+        "groupName": "InvestorForce",
+        "groupId": "grp_44255",
+        "parentGroupId": "grp_35151",
+        "contractIds": [
+          "ctr_3-VU3I3C"
+        ]
+      },
+      {
+        "groupName": "MSCI Other",
+        "groupId": "grp_44256",
+        "parentGroupId": "grp_35151",
+        "contractIds": [
+          "ctr_3-VU3I3C"
+        ]
+      },
+      {
+        "groupName": "IPD",
+        "groupId": "grp_44248",
+        "parentGroupId": "grp_35151",
+        "contractIds": [
+          "ctr_3-VU3I3C"
+        ]
+      },
+      {
+        "groupName": "RMA",
+        "groupId": "grp_44250",
+        "parentGroupId": "grp_35151",
+        "contractIds": [
+          "ctr_3-VU3I3C"
+        ]
+      },
+      {
+        "groupName": "GMI",
+        "groupId": "grp_44251",
+        "parentGroupId": "grp_35151",
+        "contractIds": [
+          "ctr_3-VU3I3C"
+        ]
+      },
+      {
+        "groupName": "MSCI, Inc.-F-A7AOEJ",
+        "groupId": "grp_91651",
+        "contractIds": [
+          "ctr_F-A7AOEJ"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+[DEFAULT]
+
+[CREDENTIALS]
+client_token = ***********************
+client_secret = ***********************
+access_token = ***********************
+access_hostname = ***********************

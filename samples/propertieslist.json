@@ -1,0 +1,37 @@
+{
+    "properties": {
+        "items": [
+            {
+                "productionVersion": null,
+                "contractId": "ctr_3-VU3I3C",
+                "propertyId": "prp_173666",
+                "groupId": "grp_48425",
+                "stagingVersion": null,
+                "note": "This is an EXAMPLE configuration for the ficticious property www.mscidomain.com",
+                "propertyName": "MSCI-Example-Config",
+                "latestVersion": 2,
+                "accountId": "act_AANA-289OMW"
+            },
+            {
+                "productionVersion": null,
+                "contractId": "ctr_3-VU3I3C",
+                "propertyId": "prp_188292",
+                "groupId": "grp_48425",
+                "stagingVersion": null,
+                "propertyName": "MSCI-AdvancedXML",
+                "latestVersion": 2,
+                "accountId": "act_AANA-289OMW"
+            },
+            {
+                "productionVersion": null,
+                "contractId": "ctr_3-VU3I3C",
+                "propertyId": "prp_173750",
+                "groupId": "grp_48425",
+                "stagingVersion": null,
+                "propertyName": "MSCI-Example-Config-Test",
+                "latestVersion": 1,
+                "accountId": "act_AANA-289OMW"
+            }
+        ]
+    }
+}
